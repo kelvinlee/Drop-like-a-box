@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <p>用来判断IE7以下</p>
+        <![endif]-->
+
+        <!-- div#main.main>div.left+(div#center.center>(div.top>(div.topl>div.liner+div.lineb)+(div.midw.topc>div.lineb)+(div.topr>div.linel+div.lineb))+(div.mid>(div.midl>div.liner)+div.midw.midc.content+(div.midr>div.linel))+(div.bottom>(div.botl>div.liner+div.linet)+(div.midw.botc>div.linet)+(div.botr>div.linel+div.linet)))+div.right -->
+        <div id="main" class="main">
+            <div class="left"></div>
+            <div id="center" class="center">
+                <div class="top">
+                    <div class="topl">
+                        <div class="liner"></div>
+                        <div class="lineb"></div>
+                    </div>
+                    <div class="midw topc">
+                        <div class="lineb"></div>
+                    </div>
+                    <div class="topr">
+                        <div class="linel"></div>
+                        <div class="lineb"></div>
+                    </div>
+                </div>
+                <div class="mid">
+                    <div class="midl">
+                        <div class="liner"></div>
+                    </div>
+                    <div class="midw midc content">
+                        <article><h1>这里是标题文字</h1>
+                            <p class="text">&nbsp
+                            这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文<br/>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p></article>
+                    </div>
+                    <div class="midr">
+                        <div class="linel"></div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="botl">
+                        <div class="liner"></div>
+                        <div class="linet"></div>
+                    </div>
+                    <div class="midw botc">
+                        <div class="linet"></div>
+                    </div>
+                    <div class="botr">
+                        <div class="linel"></div>
+                        <div class="linet"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script> 
+        <script>
+            $(document).ready(function(){
+                $("#center").moveModel({
+                    moving:function(t,l,b,r){
+                        if ((l+r)<100) {
+                            $(".text").stop().animate({"font-size":"12px"},300);
+                        }else if((l+r)<200) {
+                            $(".text").stop().animate({"font-size":"14px"},300);
+                        }else if((l+r)<300) {
+                            $(".text").stop().animate({"font-size":"16px"},300);
+                        }else if((l+r)<400) {
+                            $(".text").stop().animate({"font-size":"18px"},300);
+                        }else{
+                            $(".text").stop().animate({"font-size":"20px"},300);
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
